@@ -17,8 +17,8 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     on<UserEvent>((event, emit) async {
       emit(UserLoading());
       try {
-        List<User> userList = await _userRepository.getUsers();
-        emit(UserLoadedState(userList));
+        List<dynamic> userList = await _userRepository.getUsers();
+        emit(UserLoadedState(userList.cast<User>()));
         debugPrint(userList.length.toString());
       } catch (e) {
         debugPrint("error msg ${e.toString()}");

@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:providerexample/data/models/user_models/user_model.dart';
 
 class RestClient {
-  Future<List<User>?> users() async {
-    List<User>? users;
+  Future<List<dynamic>> users() async {
+    List<dynamic>? users;
     final Dio dio = Dio(
       BaseOptions(
         baseUrl: 'https://jsonplaceholder.typicode.com',

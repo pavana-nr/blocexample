@@ -7,11 +7,11 @@ part of 'user_model.dart';
 // **************************************************************************
 
 User _$UserFromJson(Map<String, dynamic> json) => User(
-      name: json['name'] as String,
-      userName: json['userName'] as String,
-      email: json['email'] as String,
-      phone: json['phone'] as String,
-      website: json['website'] as String,
+      name: json['name'] as String?,
+      userName: json['userName'] as String?,
+      email: json['email'] as String?,
+      phone: json['phone'] as String?,
+      website: json['website'] as String?,
       address: Address.fromJson(json['address'] as Map<String, dynamic>),
       company: Company.fromJson(json['company'] as Map<String, dynamic>),
     );
