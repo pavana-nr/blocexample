@@ -7,11 +7,11 @@ class UserInitialState extends UserState {}
 class UserLoading extends UserState {}
 
 class UserLoadedState extends UserState {
-  List<User> data;
+  List<User>? data;
   UserLoadedState(this.data);
 }
 
 class UserError extends UserState {
-  Error e;
+  Error? e;
   UserError(this.e);
 }

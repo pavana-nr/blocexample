@@ -5,22 +5,20 @@ import 'package:providerexample/data/models/user_models/user_model.dart';
 class RestClient {
   Future<List<User>?> users() async {
     List<User>? users;
-    final Dio _dio = Dio(
+    final Dio dio = Dio(
       BaseOptions(
         baseUrl: 'https://jsonplaceholder.typicode.com',
       ),
     );
 
     try {
-      Response userData = await _dio.get('/users');
-
-      debugPrint('User Info: ${userData.data}');
-
-      users = User.fromJson(userData.data) as List<User>?;
+      Response userData = await dio.get('/users');
+      users = userData.data.map((user) => User.fromJson(user)).toList();
+      debugPrint('Users List: $users');
     } on DioError catch (e) {
       parseDioError(e);
     }
-    return users;
+    return users!;
   }
 
   void parseDioError(DioError e) {

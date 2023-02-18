@@ -11,6 +11,7 @@ Address _$AddressFromJson(Map<String, dynamic> json) => Address(
       street: json['street'] as String,
       suite: json['suite'] as String,
       zipcode: json['zipcode'] as String,
+      geo: Geo.fromJson(json['geo'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$AddressToJson(Address instance) => <String, dynamic>{
@@ -18,4 +19,5 @@ Map<String, dynamic> _$AddressToJson(Address instance) => <String, dynamic>{
       'suite': instance.suite,
       'city': instance.city,
       'zipcode': instance.zipcode,
+      'geo': instance.geo,
     };
