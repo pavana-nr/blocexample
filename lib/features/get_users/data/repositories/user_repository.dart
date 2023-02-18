@@ -1,4 +1,4 @@
-import 'package:providerexample/data/data_sources/api_service.dart';
+import '../data_sources/api_service.dart';
 
 class UserRepository {
   static final UserRepository _singletonUserRepository =

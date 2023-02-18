@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:providerexample/presentation/bloc/user_bloc/user_bloc.dart';
-import 'package:providerexample/presentation/bloc/user_bloc/user_event.dart';
+import 'package:providerexample/features/get_users/presentation/bloc/user_bloc/user_bloc.dart';
 
 import '../../data/models/user_models/user_model.dart';
+import '../bloc/user_bloc/user_event.dart';
 import '../bloc/user_bloc/user_state.dart';
 
 class MyHomePage extends StatefulWidget {

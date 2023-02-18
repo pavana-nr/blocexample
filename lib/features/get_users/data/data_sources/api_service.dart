@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:providerexample/data/models/user_models/user_model.dart';
+import '../models/user_models/user_model.dart';
 
 class RestClient {
   Future<List<dynamic>> users() async {

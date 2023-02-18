@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:providerexample/data/repositories/user_repository.dart';
-import 'package:providerexample/presentation/bloc/user_bloc/user_event.dart';
-import 'package:providerexample/presentation/bloc/user_bloc/user_state.dart';
 
 import '../../../data/models/user_models/user_model.dart';
+import '../../../data/repositories/user_repository.dart';
+import 'user_event.dart';
+import 'user_state.dart';
 
 class UserBloc extends Bloc<UserEvent, UserState> {
   final UserRepository _userRepository = UserRepository();

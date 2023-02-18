@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'presentation/bloc/user_bloc/user_bloc.dart';
-import 'presentation/views/my_home_page.dart';
+import 'features/get_users/presentation/bloc/user_bloc/user_bloc.dart';
+import 'features/get_users/presentation/pages/my_home_page.dart';
 
 void main() {
   runApp(const MyApp());
